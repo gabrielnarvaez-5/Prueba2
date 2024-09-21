@@ -7,7 +7,7 @@ import { Iasignaciones } from '../Interfaces/iasignaciones';
   providedIn: 'root',
 })
 export class AsignaturasService {
-  private apiurl = 'http://localhost/sexto/Proyectos/03MVC/controllers/asignaturas.controller.php?op=';
+  private apiurl = 'http://localhost/sexto/Proyectos/03MVC/controllers/gestion.controller.php?op=';
 
   constructor(private http: HttpClient) {}
 

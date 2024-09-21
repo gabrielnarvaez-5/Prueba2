@@ -7,21 +7,30 @@ import { Iestudiantes } from '../Interfaces/iestudiantes';
   providedIn: 'root',
 })
 export class EstudiantesService {
-  private apiurl = 'http://localhost/sexto/Proyectos/03MVC/controllers/estudiantes.controller.php?op=';
+  private apiurl = 'http://localhost/sexto/Proyectos/03MVC/controllers/gestion.controller.php?op=';
 
   constructor(private http: HttpClient) {}
 
-  todos(): Observable<Iestudiantes[]> {
-    return this.http.get<Iestudiantes[]>(this.apiurl + 'todos');
+  // Método para obtener todos los estudiantes
+  obtenerEstudiantes(): Observable<Iestudiantes[]> {
+    return this.http.get<Iestudiantes[]>(this.apiurl + 'todosEstudiantes');
   }
 
+  // Método para eliminar un estudiante
   eliminar(idEstudiante: number): Observable<number> {
     const formData = new FormData();
     formData.append('estudiante_id', idEstudiante.toString());
     return this.http.post<number>(this.apiurl + 'eliminar', formData);
   }
 
-  insertar(estudiante: Iestudiantes): Observable<any> {
-    return this.http.post<any>(this.apiurl + 'insertar', estudiante);
+  // Método para insertar un nuevo estudiante
+  insertarEstudiante(estudiante: Iestudiantes): Observable<Iestudiantes> {
+    const formData = new FormData();
+    formData.append('nombre', estudiante.nombre);
+    formData.append('apellido', estudiante.apellido);
+    formData.append('fecha_nacimiento', estudiante.fecha_nacimiento);
+    formData.append('grado', estudiante.grado);
+    return this.http.post<Iestudiantes>(this.apiurl + 'insertarEstudiante', formData);
   }
+  
 }

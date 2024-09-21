@@ -1,23 +1,23 @@
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { ProveedoresComponent } from './proveedores/proveedores.component';
-import { ClientesComponent } from './clientes/clientes.component';
-import { ProductosComponent } from './productos/productos.component';
+import { ProfesoresComponent } from './profesores/profesores.component';
+import { EstudiantesComponent } from './estudiantes/estudiantes.component';
+import { ClasesComponent } from './clases/clases.component'; 
+
 export const routes: Routes = [
   {
     path: '',
-    component: AppComponent,
+    component: ProfesoresComponent,
   },
   {
-    path: 'proveedores',
-    component: ProveedoresComponent,
+    path: 'profesores', // Ruta para profesores
+    component: ProfesoresComponent,
   },
   {
-    path: 'clientes',
-    component: ClientesComponent,
+    path: 'estudiantes', // Ruta para estudiantes
+    component: EstudiantesComponent,
   },
   {
-    path: 'productos',
-    component: ProductosComponent,
+    path: 'clases', // Ruta para clases
+    component: ClasesComponent,
   },
 ];

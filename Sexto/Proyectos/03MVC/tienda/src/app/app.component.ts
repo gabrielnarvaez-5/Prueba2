@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+/*import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ProveedorService } from './Services/proveedor.service';
-import { Iproveedor } from './Interfaces/iproveedor';
+//import { ProveedorService } from './Services/proveedor.service';
+//import { Iproveedor } from './Interfaces/iproveedor';
 //import Swal from 'sweetalert2';
 @Component({
   selector: 'app-root',
@@ -30,4 +30,20 @@ export class AppComponent {
       this.cargatabla();
     });
   }
+}*/
+
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms'; 
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule, RouterModule, FormsModule],
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+})
+export class AppComponent {
+  title = 'Gestion de Estudiantes y Profesores';
 }
