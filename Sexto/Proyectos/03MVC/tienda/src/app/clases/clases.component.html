@@ -1,0 +1,22 @@
+<div class="clases-container">
+    <h2>Agregar Clase</h2>
+    <form (ngSubmit)="agregarClase(nuevaClase)" #claseForm="ngForm">
+      <div>
+        <label for="nombre_clase">Nombre de la Clase:</label>
+        <input type="text" id="nombre_clase" required [(ngModel)]="nuevaClase.nombre_clase" name="nombre_clase">
+      </div>
+      <div>
+        <label for="profesor_id">ID del Profesor:</label>
+        <input type="number" id="profesor_id" required [(ngModel)]="nuevaClase.profesor_id" name="profesor_id">
+      </div>
+      <button type="submit">Agregar Clase</button>
+    </form>
+  
+    <h3>Lista de Clases</h3>
+    <ul>
+      <li *ngFor="let clase of clases">
+        {{ clase.nombre_clase }} - ID Profesor: {{ clase.profesor_id }}
+      </li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,61 @@
+<h2>Profesores</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Especialidad</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let profesor of profesores">
+      <td>{{ profesor.profesor_id }}</td>
+      <td>{{ profesor.nombre }}</td>
+      <td>{{ profesor.apellido }}</td>
+      <td>{{ profesor.especialidad }}</td>
+      <td>{{ profesor.email }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Estudiantes</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Fecha de Nacimiento</th>
+      <th>Grado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let estudiante of estudiantes">
+      <td>{{ estudiante.estudiante_id }}</td>
+      <td>{{ estudiante.nombre }}</td>
+      <td>{{ estudiante.apellido }}</td>
+      <td>{{ estudiante.fecha_nacimiento }}</td>
+      <td>{{ estudiante.grado }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Clases</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre de Clase</th>
+      <th>ID del Profesor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let materia of materias">
+      <td>{{ materia.clase_id }}</td>
+      <td>{{ materia.nombre_clase }}</td>
+      <td>{{ materia.profesor_id }}</td>
+    </tr>
+  </tbody>
+</table>

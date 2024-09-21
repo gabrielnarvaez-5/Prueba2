@@ -1,0 +1,28 @@
+<form (ngSubmit)="agregarEstudiante(nuevoEstudiante)" #estudianteForm="ngForm">
+    <input type="text" required [(ngModel)]="nuevoEstudiante.nombre" name="nombre" placeholder="Nombre">
+    <input type="text" required [(ngModel)]="nuevoEstudiante.apellido" name="apellido" placeholder="Apellido">
+    <input type="date" required [(ngModel)]="nuevoEstudiante.fecha_nacimiento" name="fecha_nacimiento">
+    <input type="text" required [(ngModel)]="nuevoEstudiante.grado" name="grado" placeholder="Grado">
+    <button type="submit">Agregar Estudiante</button>
+  </form>
+  
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Fecha de Nacimiento</th>
+        <th>Grado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let estudiante of estudiantes">
+        <td>{{ estudiante.nombre }}</td>
+        <td>{{ estudiante.apellido }}</td>
+        <td>{{ estudiante.fecha_nacimiento }}</td>
+        <td>{{ estudiante.grado }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
