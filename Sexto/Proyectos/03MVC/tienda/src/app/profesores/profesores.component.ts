@@ -18,7 +18,7 @@ import { ClasesService } from '../Services/clases.service';
 export class ProfesoresComponent implements OnInit {
   estudiantes: Iestudiantes[] = [];
   profesores: Iprofesores[] = [];
-  materias: Iclases[] = [];
+  materias: Iclases[] = [];  
 
   constructor(
     private estudiantesService: EstudiantesService,

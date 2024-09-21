@@ -63,7 +63,7 @@ switch ($_GET["op"]) {
         break;
 
     // CRUD para Clases
-    case 'todosClases':
+    case 'todosClases':  
         $datos = $gestion->todosClases();
         $todos = [];
         while ($row = mysqli_fetch_assoc($datos)) {

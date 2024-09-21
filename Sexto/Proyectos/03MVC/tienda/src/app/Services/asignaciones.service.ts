@@ -19,7 +19,7 @@ export class AsignaturasService {
     const formData = new FormData();
     formData.append('asignatura_id', idAsignatura.toString());
     return this.http.post<number>(this.apiurl + 'eliminar', formData);
-  }
+  }    
 
   insertar(asignatura: Iasignaciones): Observable<any> {
     return this.http.post<any>(this.apiurl + 'insertar', asignatura);
